@@ -5,7 +5,15 @@ Seed Project for Angular 2.0 and Node JS
 ```javascript
 $ npm install
 ```
-#### run the app:
+#### run the app server:
 ```javascript
 $ npm start
+```
+#### build the UI code:
+```javascript
+$ npm run build
+```
+#### For Production:
+```javascript
+$ npm run build:prod 
 ```
