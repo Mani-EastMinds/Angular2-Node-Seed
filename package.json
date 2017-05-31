@@ -4,7 +4,8 @@
     "private": true,
     "scripts": {
         "start": "node ./bin/www",
-        "build": "del public/js/app && webpack --config webpack.config.dev.js --progress --profile --watch"
+        "build": "del-cli public/js/app && webpack --config webpack.config.dev.js --progress --profile --watch",
+        "build:prod": "del-cli public/js/app && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'public/js/app/**/*.js' 'public/js/app/**/*.js.map' '!public/js/app/bundle.js' '!public/js/app/*.chunk.js' 'assets/app/**/*.ngfactory.ts' 'assets/app/**/*.shim.ts'"
     },
     "dependencies": {
         "@angular/animations": "^4.0.0",
@@ -31,7 +32,7 @@
         "zone.js": "^0.8.11"
     },
     "devDependencies": {
-        "@types/core-js": "^0.9.41",
+        "@types/core-js": "^0.9.35",
         "@types/node": "^7.0.22",
         "angular2-router-loader": "^0.3.5",
         "angular2-template-loader": "^0.6.2",

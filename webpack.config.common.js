@@ -34,4 +34,4 @@ module.exports = {
             './src' // location of your. Refer to src https://github.com/angular/angular.io/issues/3514
         )
     ]
-}
+};
