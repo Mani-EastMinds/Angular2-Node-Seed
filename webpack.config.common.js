@@ -21,9 +21,17 @@ module.exports = {
                 loader: 'html'
             },
             {
-                test: /.css/,
+                test: /\.css$/,
                 loader: 'raw'
             }
         ]
-    }
+    },
+
+    plugins: [
+        new webpack.ContextReplacementPlugin(
+            // The (\\|\/) piece accounts for path separators in *nix and Windows
+            /angular(\\|\/)core(\\|\/)@angular/,
+            './src' // location of your. Refer to src https://github.com/angular/angular.io/issues/3514
+        )
+    ]
 }
