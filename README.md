@@ -1,5 +1,5 @@
-# Angular2-Node-Seed
-Seed Project for Angular 2.0 and Node JS
+# Angular 4 Node Seed (Upgraded from Angular 2.0)
+Seed Project for Angular 4, Webpack 2 and Node JS
 
 #### install dependencies:
 ```javascript
